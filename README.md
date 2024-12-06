@@ -1,6 +1,6 @@
 # Meteor Stylus Autoprefixer
 
-![Version](https://img.shields.io/badge/meteor-2.x%20|%203.x-brightgreen?logo=meteor&logoColor=white)
+![Version](https://img.shields.io/badge/meteor-3.x-brightgreen?logo=meteor&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 A custom Meteor build plugin for compiling Stylus (`.styl`) files into CSS, automatically adding vendor prefixes with Autoprefixer, and supporting Hot Module Replacement (HMR) for an enhanced development experience.
