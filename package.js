@@ -1,6 +1,6 @@
 Package.describe({
     name: 'chatra:stylus-autoprefixer',
-    version: '1.0.2',
+    version: '1.0.3',
     summary: 'Meteor build plugin to compile Stylus files with Autoprefixer',
     documentation: 'README.md',
     git: 'https://github.com/chatr/stylus-autoprefixer'
@@ -8,7 +8,7 @@ Package.describe({
 
 Package.registerBuildPlugin({
     name: 'chatra:stylus-autoprefixer',
-    use: ['ecmascript@0.16.3'],
+    use: ['ecmascript@0.16.8'],
     sources: ['plugin.js'],
     npmDependencies: {
         stylus: '0.64.0',
@@ -18,6 +18,6 @@ Package.registerBuildPlugin({
 });
 
 Package.onUse((api) => {
-    api.versionsFrom(['METEOR@2.8.0', '3.0']);
+    api.versionsFrom('3.0');
     api.use(['isobuild:compiler-plugin@1.0.0']);
 });
