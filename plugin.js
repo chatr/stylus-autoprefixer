@@ -1,3 +1,4 @@
+import {createRequire} from 'node:module';
 import path from 'path';
 import stylus from 'stylus';
 import postcss from 'postcss';
@@ -13,6 +14,7 @@ class StylusAutoprefixerCompiler {
         this.cache = new Map();
         this.config = void 0;
         try {
+            const require = createRequire(process.cwd());
             this.config = require(path.join(process.cwd(), 'stylus.config.js'));
         } catch (err) {}
     }
@@ -65,7 +67,7 @@ class StylusAutoprefixerCompiler {
             // Add the compiled CSS to Meteor's build system
             file.addStylesheet({
                 path: filePath.replace('.styl', '.css'),
-                data: prefixed.css
+                data: prefixed.css,
             });
         } catch (error) {
             // Handle and report errors gracefully
